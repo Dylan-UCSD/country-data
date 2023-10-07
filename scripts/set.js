@@ -9,10 +9,12 @@ fetch("https://restcountries.com/v3.1/all")
 fetch("https://restcountries.com/v3.1/all?fields=name").then(api=>api.json())
 .then(data=>countryName = data.map((datum)=>datum.name.common)).catch(error=>console.log(error))
 
-setTimeout(()=>{setCountries()},100)
+setTimeout(()=>{setCountries()},500)
 const setCountries = ()=>{
     let counter = 0
+    console.log(countries)
     for(cou of countries){
+        console.log(cou)
         let dataSet = new Array()
         
         if('name' in cou && cou.name.common != 'Åland Islands'){

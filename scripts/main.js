@@ -5,7 +5,7 @@ let addListener = (element)=>{
         element.addEventListener('mouseenter', ()=>{
             element.style.width = '100%'
             element.style.height = '100%'
-            element.style.fontSize = '30px'
+            element.style.fontSize = '120%'
             element.classList.remove('bg1')
             element.classList.add('bg2')
             element.appendChild(document.createElement('br'))
@@ -22,9 +22,9 @@ let addListener = (element)=>{
             let cap = document.createElement('p')
             let lang = document.createElement('p')
             let pop = document.createElement('p')
-            cap.style.fontSize = '20px'
-            pop.style.fontSize = '20px'
-            lang.style.fontSize = '20px'
+            cap.style.fontSize = '80%'
+            pop.style.fontSize = '80%'
+            lang.style.fontSize = '80%'
             cap.textContent = cou[1]
             pop.textContent = 'Population: ' + cou[3]
             lang.textContent = cou[2]
