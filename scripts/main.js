@@ -11,23 +11,37 @@ let addListener = (element)=>{
             element.appendChild(document.createElement('br'))
             let cou = new Array();
             for(i = 0; i < orgCountries.length; i++){
-                console.log(orgCountries[i][0])
                 if(orgCountries[i][0] == element.textContent){
                     cou = orgCountries[i]
                     console.log(cou)
                     break
                 }
             }
+            element.style.color = "red"
             let message = document.createElement('div')
             let cap = document.createElement('p')
             let lang = document.createElement('p')
             let pop = document.createElement('p')
-            cap.style.fontSize = '80%'
-            pop.style.fontSize = '80%'
-            lang.style.fontSize = '80%'
-            cap.textContent = cou[1]
-            pop.textContent = 'Population: ' + cou[3]
-            lang.textContent = cou[2]
+            cap.style.fontSize = '1vw'
+            pop.style.fontSize = '1vw'
+            lang.style.fontSize = '1vw'
+            cap.style.color = "Orange"
+            lang.style.color = "Blue"
+            pop.style.color = "Purple"
+            cap.textContent = "Capital: " + cou[1]
+            let langs = ""
+            if(cou[2].length > 3){
+                for(i = 0; i < 3; i++){
+                    langs = langs + (cou[2][i] + " ")
+                }
+            }else{ 
+                for(i = 0; i < cou[2].length; i++){
+                    langs = langs + (cou[2][i] + " ") 
+                }
+            }
+            num = formatNum(cou[3])
+            pop.textContent = 'Population: ' + num
+            lang.textContent = "Langs: "+ langs
 
             message.appendChild(cap)
             message.appendChild(lang)
@@ -37,6 +51,7 @@ let addListener = (element)=>{
             element.appendChild(message)
         })
         element.addEventListener('mouseleave', ()=>{
+            element.style.color = "White"
             element.style.width = '80%'
             element.style.height = '80%'
             element.style.fontSize = '20px'
@@ -108,6 +123,8 @@ let addCountry = (country = "No Country")=>{
     box.style.display = "flex"
     box.style.flexDirection = "column"
     box.style.flexWrap = 'wrap'
+    box.style.fontWeight = "bold"
+    box.style.overflow = "hidden"
     
     container.appendChild(box)
     addListener(box)
@@ -188,3 +205,18 @@ window.addEventListener('resize', ()=>{
     update()
 })
 
+function formatNum(num){
+    let premat = num.toString()
+    let formatted = ""
+    let counter = 0;
+    for(i = premat.length-1; i >= 0; i--){
+        counter++;
+        if(counter == 4){
+            counter = 1;
+            formatted = premat[i] + ',' + formatted
+        }else
+            formatted = premat[i] + formatted
+            
+    }
+    return formatted
+}
