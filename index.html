@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Word Countries List</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width initial-scale=1"/>
+	<meta name = "description" content = "A site that sorts countries by differnt parameters"/>
+	<meta name="author" content="Dylan Umino"/>
+	<link rel="icon" type="img/png" href="images/icon-removebg-preview (1).png"/>
+<!--<style>
+		body {
+		  margin: 0;
+		  padding: 0;
+		  height: 100%;
+		}
+  
+		#top {
+		  /*background-image: url('./images/globe-2.jpg');*/
+		  background: linear-gradient(to bottom,
+          rgba(0, 122, 236, 0.6),
+          rgba(0, 122, 236, 0.5),
+          rgba(0, 122, 236, 0.4),
+          rgba(0, 122, 236, 0.3),
+          rgba(0, 122, 236, 0.2) 50%
+        ), url('./images/globe-2.jpg');
+		background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: cover;
+		  text-align: center;
+		  height: 60vh;
+		}
+  
+		#bottom {
+		  height: 40vh;
+		  text-align: center;
+		}
+		.purpleButton{
+			background-color: rgb(93, 48, 177);/*rgb(59, 2, 165) selected color*/
+			color: white;
+			border: 0px;
+			height: 40px;
+			font-family: Montserrat;
+
+		}
+		.searchBar{
+			color: black;
+			width: 30%;
+			height: 40px;  
+			border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+			
+		}
+		input::placeholder{
+			text-align: center;
+		}
+		input{
+			text-align: left;
+		}
+		
+		</style>
+		<style id="bottomPart">
+
+			.frame{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.container{
+				/*height: 174px; /*may have to manually set the hhight and width in js*/
+				padding-top: 1%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.box{
+				width: 80%;
+				height: 80%;
+				margin: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: Montserrat;
+			color: white;
+			font-size: 20px;
+			
+			}
+			.bg1{
+			background: linear-gradient(to bottom,
+			rgba(48, 32, 139, 0.2),
+			rgba(48, 32, 139, 0.3),
+			rgba(48, 32, 139, 0.4),
+			rgba(48, 32, 139, 0.5),
+			rgba(48, 32, 139, 0.6) 50%
+			), url('./images/map_image.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			}
+			.bg2{
+				background: linear-gradient(to bottom,
+			rgba(0, 253, 21, 0.2),
+			rgba(0, 253, 21, 0.3),
+			rgba(0, 253, 21, 0.4),
+			rgba(0, 253, 21, 0.5),
+			rgba(0, 253, 21, 0.6) 50%
+			), url('./images/map_image.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			}
+		</style>-->	
+</head>
+
+<body>
+	
+	<div id="top" style="text-align: center; justify-content: center;">
+		<h1 style="font-family: Montserrat,sans-serif; font-size: 350%;padding:1%;margin:0;color: white;">WORLD COUNTRIES LIST</h1>
+		<h3 style="font-family: Montserrat,sans-serif; color: white;font-size: 30px;">Total number of countries: 250</h3>
+		<p id = startsWith style="font-family: Montserrat,sans-serif; color: white;font-size: 25px;">All countries</p>
+		<button id = "start" class="purpleButton" >Starting Word</button>
+		<button id = "include" class="purpleButton">Search with any word</button>
+		<button id = "order" class="purpleButton" style="width: 3vw">
+			&#8595A
+		</button>
+		<br><br>
+		<input type="text" placeholder="Search Country..." class = "searchBar">
+		</input>
+	
+	</div>
+    <div id="bottom" style="display: flex; flex-direction: row;flex-wrap: wrap;">
+		<div class="frame">
+			
+			
+			
+		</div>
+	</div>
+	<header class = "head">
+		<a href="https://github.com/Dylan-UCSD" target="_blank" rel="noreferrer"><img style = "padding-top: 2vh;"class="img" src="images/GitHub-logo.png"/></a>
+		<a href="https://www.linkedin.com/in/dylan-umino-aa774328a/" target="_blank" rel="noreferrer"><img style="height: 10vh;" class="img" src="images/linkedIn.webp"/></a>
+	</header>
+	<!--<script src="./data/countries.js"></script>-->
+	<script src="./scripts/set.js"></script>
+
+</body>
+
+</html>

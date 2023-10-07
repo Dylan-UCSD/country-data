@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
+body {
+	margin: 0;
+	padding: 0;
+	/*height: 100%;*/
+}
+  
+#top {
+	/*background-image: url('./images/globe-2.jpg');*/
+	background: linear-gradient(to bottom,
+    rgba(0, 122, 236, 0.6),
+    rgba(0, 122, 236, 0.5),
+    rgba(0, 122, 236, 0.4),
+    rgba(0, 122, 236, 0.3),
+    rgba(0, 122, 236, 0.2) 50%
+    ), url('./images/globe-2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	height: 60vh;
+}
+  
+#bottom {
+	height: 40vh;
+	text-align: center;
+}
+.head{
+    z-index: 2;
+    top: 1%;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100vw;
+    background-color: none;
+    position:absolute;
+    overflow: hidden;
+}
+.img{
+    height: 6vh;
+    width: 10vh;
+    aspect-ratio: 1;
+}
+.purpleButton{
+	background-color: rgb(93, 48, 177);/*rgb(59, 2, 165) selected color*/
+	color: white;
+	border: 0px;
+	height: 8vh;
+    width: 17vw;
+	font-family: "Montserrat" initial;
+    font-size: 25px;
+    border-radius:15px;
+
+}
+.searchBar{
+	color: black;
+	width: 40vw;
+	height: 8vh;  
+	border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    font-size: 150%;
+    color: rgb(59, 2, 165);
+	text-align: center;		
+}
+input::placeholder{
+	text-align: center;
+}
+input{
+	text-align: left;
+}
+		
+
+.frame{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.container{
+	/*height: 174px; /*may have to manually set the hhight and width in js*/
+	padding-top: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.box{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Montserrat;
+	color: white;
+	font-size: 20px;
+			
+}
+.bg1{
+	background: linear-gradient(to bottom,
+	rgba(48, 32, 139, 0.2),
+	rgba(48, 32, 139, 0.3),
+	rgba(48, 32, 139, 0.4),
+	rgba(48, 32, 139, 0.5),
+	rgba(48, 32, 139, 0.6) 50%
+    ), url('./images/map_image.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.bg2{
+	background: linear-gradient(to bottom,
+	rgba(0, 253, 21, 0.2),
+	rgba(0, 253, 21, 0.3),
+	rgba(0, 253, 21, 0.4),
+	rgba(0, 253, 21, 0.5),
+	rgba(0, 253, 21, 0.6) 50%
+	), url('./images/map_image.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
